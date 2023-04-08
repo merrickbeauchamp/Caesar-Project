@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html class="h-full" lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@2.6.0/dist/full.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/kaboom/dist/kaboom.js"></script>
+    <style>
+      @font-face {
+        font-family: roman;
+        src: url("./CAESAR.TTF");
+      }
+      @font-face {
+        font-family: pixel;
+        src: url("./pixel.ttf");
+      }
+    </style>
+    <title>Julius Caesar Project</title>
+  </head>
+  <body class="h-full">
+    <div class="navbar bg-transparent hidden">
+      <div class="flex-1">
+        <a class="btn normal-case text-xl">Julius Caesar Project</a>
+      </div>
+      <div class="flex-none">
+        <button class="btn normal-case text-xl">Merrick Beauchamp</button>
+      </div>
+    </div>
+    <div class="relative h-full">
+      <div
+        class="absolute top-0 left-0 opacity-0 transition-opacity duration-[5s] h-full w-full bg-[url('./pic.png')]"
+        id="slide"
+      >
+        <div class="flex flex-col justify-center items-center w-full h-full">
+          <div
+            class="py-6 px-6 bg-[#1D130C] text-[#DCD1BB] rounded-xl w-[30rem]"
+          >
+            <h1 class="text-center text-5xl font-[roman]">Good Morrow</h1>
+            <h2 class="text-center">
+              This is an interactive guide of Act 3, Scene 1 of Julius Caesar. A
+              lot occurs in this particular scene and the goal of this guide is
+              to provide a well rounded analysis while also keeping the viewer
+              engaged. Please keep in mind that this is not a template, every
+              piece of this presentation was hand placed on to your computer
+              screen. If you would like full screen please hit
+              <kbd class="kbd kbd-sm">F11</kbd> on your keyboard. Please enjoy.
+            </h2>
+            <button
+              class="btn btn-primary block mx-auto mt-3 bg-[#987852] border-[#987852] hover:bg-[#51463E] hover:border-[#51463E]"
+              onclick="changeSlide(2)"
+            >
+              Next
+            </button>
+          </div>
+        </div>
+      </div>
+      <div
+        class="absolute top-0 left-0 opacity-0 transition-opacity duration-[5s] h-full w-full -z-10 bg-[url('./pic2.png')]"
+        id="slide"
+      >
+        <div class="my-10">
+          <h1
+            class="ml-20 font-[roman] w-fit bg-[#CCCDCC] text-5xl text-[#1C1C1C] font-bold"
+          >
+            "The ides of March are come."
+          </h1>
+          <h2
+            class="ml-20 px-2 mt-4 w-fit bg-[#CCCDCC] text-2xl text-[#1C1C1C] font-semibold"
+          >
+            - Caesar
+          </h2>
+          <div class="flex justify-center mt-8 mx-auto text-lg text-[#1C1C1C]">
+            <h3 class="mr-2 p-3 rounded-lg w-64 bg-[#CCCDCC]">
+              Before this particular scene, Caesar was warned by the soothsayer
+              about the ides of March. However, as triumphantly expressed above,
+              Caesar believes that the ides of March are over. Which results in
+              the soothsayer providing Caesar with an even more ambiguous
+              response, that fate might still prevail.
+            </h3>
+            <h3 class="mr-2 p-3 rounded-lg w-64 bg-[#CCCDCC]">
+              In addition, Caesar is given another warning. Artemidorus urges
+              Caesar to read his letter which contains the events that are bound
+              to happen later. However, Caesar denies to read any letters
+              pertaining to him as he believes he must prioritize other's
+              welfare rather than his own.
+            </h3>
+            <h3 class="mr-2 p-3 rounded-lg w-64 bg-[#CCCDCC]">
+              Both of the denials by Caesar create a dramatic irony between the
+              audience. As the audience is aware of the future assassination and
+              the importance of the warnings. But, Caesar continues to ignore
+              them which will eventually lead him to his own downfall.
+            </h3>
+          </div>
+          <div class="flex flex-row-reverse mt-8">
+            <button
+              class="btn btn-primary mr-20 bg-[#393939] border-[#393939] text-[#D8D8D8] hover:bg-[#1C1C1C] hover:border-[#1C1C1C]"
+              onclick="changeSlide(3)"
+            >
+              Next
+            </button>
+          </div>
+        </div>
+      </div>
+      <div
+        class="absolute top-0 left-0 opacity-0 transition-opacity duration-[5s] h-full w-full -z-10 bg-[url('./pic4.png')]"
+        id="slide"
+      >
+        <div class="relative h-screen">
+          <div class="absolute inset-0 flex items-center justify-center">
+            <canvas id="game"></canvas>
+          </div>
+        </div>
+      </div>
+      <div
+        class="absolute top-0 left-0 opacity-0 transition-opacity duration-[5s] h-full w-full -z-10 bg-[url('./audience.png')]"
+        id="slide"
+      >
+        <div class="flex flex-col justify-center items-center w-full h-full">
+          <div
+            class="py-6 px-6 bg-[#948F6A] text-[#F5EBC6] rounded-xl w-[30rem]"
+          >
+            <h1 class="text-center text-5xl font-[roman]">"Et tu, Brute?"</h1>
+            <h2 class="text-center">
+              This line stands out in many ways. Firstly, it is one of the only
+              uses of latin in the play. Additionally, there is a very strong
+              meaning behind it. “Et tu Brute” or “You too Brutus”. The phrase
+              represents the moment when Caesar realizes that even his trusted
+              friend, Brutus, has joined the conspirators in assassinating him.
+              The line is a poignant representation of betrayal, friendship, and
+              power, and it has become a popular phrase in modern culture to
+              express a sense of betrayal or disappointment.
+            </h2>
+            <button
+              class="btn btn-primary block mx-auto mt-3 bg-[#989E81] border-[#989E81] hover:bg-[#4C5F44] hover:border-[#4C5F44]"
+              onclick="changeSlide(5)"
+            >
+              Next
+            </button>
+          </div>
+        </div>
+      </div>
+      <div
+        class="absolute top-0 left-0 opacity-0 transition-opacity duration-[5s] h-full w-full -z-10 bg-[url('./pic5.png')]"
+        id="slide"
+      >
+        <div class="flex flex-col m-4">
+          <h1
+            class="self-start w-fit bg-[#7C0B0E] p-1 font-[roman] text-xl text-[#99A399] rounded-lg font-bold"
+          >
+            "And Caesar’s spirit, ranging for revenge,<br />
+            With Ate by his side come hot from hell,<br />
+            Shall in these confines with a monarch’s voice<br />
+            Cry “Havoc!” and let slip the dogs of war,"
+          </h1>
+          <h1
+            class="self-start mt-2 w-fit bg-[#7C0B0E] p-1 font-[roman] text-2xl text-[#99A399] rounded-lg font-bold"
+          >
+            - Antony
+          </h1>
+          <h1
+            class="place-self-center w-[70%] h-1/3 bg-[#7C0B0E] mt-5 p-2 text-lg text-[#99A399] rounded-lg"
+          >
+            Antony plays the key role in the rest of the tragedy. During the
+            assassination, the conspirators made sure Antony was not there, so
+            their plan would go accordingly. After the death of Caesar, Antony
+            went to the capital to make peace with conspirators. He first asks
+            if he is able to speak at the funeral. Brutus agrees as he thinks
+            everyone will agree with his logic, however Cassius is doubtful as
+            he is aware of Antony’s strong rhetorical appeal. Additionally,
+            Antony has a soliloquy where he expresses his true intentions. As
+            shown in the excerpt above, Caesar’s ghost will avenge his death.
+            The allusion in the excerpt supports this idea as Ate is the ancient
+            Greek goddess of destruction and folly, who is by Caesar’s “side”.
+            The excerpt also foreshadows the upcoming war which most definitely
+            includes destruction and folly.
+          </h1>
+          <button
+            class="place-self-end btn btn-primary mt-5 mr-20 bg-[#7C0B0E] border-[#7C0B0E] text-[#99A399] hover:bg-[#010806] hover:border-[#010806]"
+            onclick="changeSlide(6)"
+          >
+            Next
+          </button>
+        </div>
+      </div>
+      <div
+        class="absolute top-0 left-0 opacity-0 transition-opacity duration-[5s] h-full w-full -z-10 bg-[url('./pic6.png')]"
+        id="slide"
+      >
+        <div class="flex flex-col justify-center items-center w-full h-full">
+          <div
+            class="py-6 px-6 bg-[#6E3318] text-[#E5CC99] rounded-xl w-[30rem]"
+          >
+            <h1 class="text-center text-5xl font-[roman]">Farewell</h1>
+            <h2 class="text-center">
+              Thank you for going through the presentation. I hope you have
+              enjoyed the explanations of the classic tragedy of Julius Caesar.
+            </h2>
+            <button
+              class="btn btn-primary block mx-auto mt-3 bg-[#7A9174] border-[#7A9174] hover:bg-[#213A2E] hover:border-[#213A2E]"
+              onclick="changeSlide(1)"
+            >
+              Restart
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script src="./index.js"></script>
+</html>
