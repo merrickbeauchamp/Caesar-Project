@@ -132,7 +132,7 @@ function startGame() {
     setTimeout(function () {
       changeSlide(currentSlide + 1);
       quit();
-    }, 10 * 1000);
+    }, 6 * 1000);
   };
 
   let hits = 23;
