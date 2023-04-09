@@ -86,7 +86,7 @@ function startGame() {
     opacity(0),
   ]);
 
-  loadSprite("julius", "https://i.imgur.com/I5MWLAZ.png");
+  loadSprite("julius", "https://github.com/merrickbeauchamp/Caesar-Project/blob/main/sprites/caesar.png?raw=true");
   const julius = add([
     sprite("julius"),
     pos(120, 80),
@@ -96,7 +96,7 @@ function startGame() {
     "julius",
   ]);
 
-  loadSprite("knife", "https://i.imgur.com/VlKPMXK.png");
+  loadSprite("knife", "https://github.com/merrickbeauchamp/Caesar-Project/blob/main/sprites/knife.png?raw=true");
   const knife = add([
     sprite("knife"),
     pos(width() / 2, 80),
@@ -115,7 +115,7 @@ function startGame() {
     sprite.move(velocity);
   };
 
-  loadSprite("blood", "https://i.imgur.com/F0qBbWT.png");
+  loadSprite("blood", "https://github.com/merrickbeauchamp/Caesar-Project/blob/main/sprites/blood.png?raw=true");
   const bloodEffect = (position) => {
     add([
       sprite("blood"),
